@@ -18,6 +18,23 @@ p {
   margin: 0;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+}
+
 /* Класс для обнуления базовых свойств у списков (ul) */
 .list {
   list-style: none;
@@ -36,6 +53,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Свойства для обнуления курсива у address */
@@ -44,8 +63,12 @@ address {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   padding-top: 80px;
+  min-width: 320px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
 }
 
 .container {
@@ -779,7 +802,6 @@ body.is-hidden {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  width: 270px;
   height: 75px;
 }
 
@@ -948,7 +970,6 @@ body.is-hidden {
   margin-left: -30px;
   margin-top: -30px;
   padding: 0;
-  list-style: none;
 }
 .clients__item {
   height: 92px;
@@ -980,8 +1001,6 @@ body.is-hidden {
           align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  width: 170px;
-  height: 92px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1006,16 +1025,28 @@ body.is-hidden {
   background-color: #2f303a;
   padding: 60px 0;
 }
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-column-gap: 70px;
-     -moz-column-gap: 70px;
-          column-gap: 70px;
+@media (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 70px;
+  }
+}
+.footer__left {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .footer__left {
+    text-align: left;
+  }
 }
 .footer__addres {
   font-family: "Roboto", sans-serif;
@@ -1059,9 +1090,18 @@ body.is-hidden {
 
 /* __________присоединяйтесь_________  */
 .join {
-  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 767px) {
+  .join {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 .join__title {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1070,12 +1110,25 @@ body.is-hidden {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media (min-width: 1200px) {
+  .join__title {
+    text-align: left;
+  }
+}
+.join__item {
+  text-align: center;
+}
 .join__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 0;
   gap: 10px;
 }
@@ -1104,14 +1157,29 @@ body.is-hidden {
 }
 
 /*____________________ Подпишитесь на рассылку____________________ */
-.mail-chimp {
-  margin-left: auto;
+@media (min-width: 768px) {
+  .mail-chimp {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .mail-chimp {
+    width: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .mail-chimp {
+    margin-top: 60px;
+  }
 }
 .mail-chimp__input {
-  min-width: 358px;
+  width: 100%;
   height: 50px;
   left: 815px;
   top: 2787px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1121,10 +1189,16 @@ body.is-hidden {
   color: white;
   padding-left: 16px;
 }
+@media (min-width: 1200px) {
+  .mail-chimp__input {
+    margin-bottom: 0px;
+    min-width: 358px;
+  }
+}
 .mail-chimp__btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1136,17 +1210,47 @@ body.is-hidden {
   line-height: 30px;
   color: white;
   border-style: none;
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  min-height: 50px;
   background: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 .mail-chimp__icon-send {
   fill: var(--primary-background-color);
   padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .mail-chimp__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  .mail-chimp__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /* ________________Portfolio page________________  */

@@ -1,21 +1,21 @@
 //utils
-@import "./utils/variables";
-@import "./utils/core";
-@import "./utils/visually-hidden";
+@import './utils/variables';
+@import './utils/core';
+@import './utils/visually-hidden';
 
 //components
-@import "./components/modal";
-@import "./components/form";
-@import "./components/checkbox";
-@import "./components/form-btn";
+@import './components/modal';
+@import './components/form';
+@import './components/checkbox';
+@import './components/form-btn';
 
 //layouts
-@import "./layout/header";
-@import "./layout/hero-section";
-@import "./layout/advantages-section";
-@import "./layout/wwd-section";
-@import "./layout/team-section";
-@import "./layout/client-section";
-@import "./layout/footer";
-@import "./layout/mail-chimp";
-@import "./layout/portfolio";
+@import './layout/header';
+@import './layout/hero-section';
+@import './layout/advantages-section';
+@import './layout/wwd-section';
+@import './layout/team-section';
+@import './layout/client-section';
+@import './layout/footer';
+
+@import './layout/portfolio';
