@@ -29,8 +29,8 @@
   <body>
     <header class="header">
       <div class="container header__main">
+        <a href="./index.html" class="logo-link"><span class="logo-accent">Web</span>Studio </a>
         <nav class="header__nav">
-          <a href="./index.html" class="logo-link"><span class="logo-accent">Web</span>Studio </a>
           <!--разделы меню /  -->
           <ul class="menu list">
             <li class="menu__item item">
@@ -63,27 +63,81 @@
             >
           </li>
         </ul>
+
+        <div class="humburger js-open-menu">
+          <div class="humburger__line"></div>
+        </div>
       </div>
     </header>
+
+    <!-- гамбургер   -->
+
+    <div class="js-menu-container">
+      <div class="js-menu-container__flex">
+        <div class="js-menu-container__top">
+          <nav class="mobile-nav">
+            <ul class="list mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a href="./index.html" class="mobile-nav__link link">Студия</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="./portfolio.html" class="mobile-nav__link link mobile-nav__link--current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="js-menu-container__bot">
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__phone"> +38 096 111 11 11 </a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__email">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="portfolio section">
         <div class="container">
           <!-- Фильтры -->
           <ul class="filter-list list">
-            <li class="animate__animated animate__pulse">
+            <li class="animate__animated animate__pulse filter-list__item">
               <button type="button" class="portfolio__btn portfolio__btn--active">Все</button>
             </li>
-            <li>
+            <li class="filter-list__item">
               <button type="button" class="portfolio__btn">Веб-сайты</button>
             </li>
-            <li>
+            <li class="filter-list__item">
               <button type="button" class="portfolio__btn">Приложения</button>
             </li>
-            <li>
+            <li class="filter-list__item">
               <button type="button" class="portfolio__btn">Дизайн</button>
             </li>
-            <li>
+            <li class="filter-list__item">
               <button type="button" class="portfolio__btn">Маркетинг</button>
             </li>
           </ul>
@@ -92,7 +146,13 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="portfolio__wrapp">
-                  <img src="./images/portfolio/img.jpeg" alt="веб-сайт" width="370" height="294" />
+                  <img
+                    class="portfolio__img"
+                    src="./images/portfolio/img.jpeg"
+                    alt="веб-сайт"
+                    width="370"
+                    height="294"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -109,7 +169,13 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="portfolio__wrapp">
-                  <img src="./images/portfolio/img1.jpeg" alt="дизайн" width="370" height="294" />
+                  <img
+                    class="portfolio__img"
+                    src="./images/portfolio/img1.jpeg"
+                    alt="дизайн"
+                    width="370"
+                    height="294"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -123,49 +189,55 @@
               >
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img2.jpeg" alt="Приложение" width="370" height="294" />
+              <img
+                class="portfolio__img"
+                src="./images/portfolio/img2.jpeg"
+                alt="Приложение"
+                width="370"
+                height="294"
+              />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Ресторан Seafood</h2>
                 <p class="portfolio__text">Приложение</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img3.jpeg" alt="Маркетинг" />
+              <img class="portfolio__img" src="./images/portfolio/img3.jpeg" alt="Маркетинг" />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Проект Prime</h2>
                 <p class="portfolio__text">Маркетинг</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img4.jpeg" alt="Приложение" />
+              <img class="portfolio__img" src="./images/portfolio/img4.jpeg" alt="Приложение" />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Проект Boxes</h2>
                 <p class="portfolio__text">Приложение</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img5.jpeg" alt="Веб-сайт" />
+              <img class="portfolio__img" src="./images/portfolio/img5.jpeg" alt="Веб-сайт" />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Inspiration has no Borders</h2>
                 <p class="portfolio__text">Веб-сайт</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img6.jpeg" alt="Дизайн" />
+              <img class="portfolio__img" src="./images/portfolio/img6.jpeg" alt="Дизайн" />
               <div class="border">
                 <h2 class="portfolio__title">Издание Limited Edition</h2>
                 <p class="portfolio__text">Дизайн</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img7.jpeg" alt="Маркетинг" />
+              <img class="portfolio__img" src="./images/portfolio/img7.jpeg" alt="Маркетинг" />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Проект LAB</h2>
                 <p class="portfolio__text">Маркетинг</p>
               </div>
             </li>
             <li class="portfolio__item">
-              <img src="./images/portfolio/img8.jpeg" alt="Приложение" />
+              <img class="portfolio__img" src="./images/portfolio/img8.jpeg" alt="Приложение" />
               <div class="portfolio__text-box">
                 <h2 class="portfolio__title">Growing Business</h2>
                 <p class="portfolio__text">Приложение</p>
@@ -264,5 +336,13 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

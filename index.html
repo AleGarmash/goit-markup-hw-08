@@ -34,8 +34,8 @@
 
     <header class="header">
       <div class="container header__main">
+        <a href="./index.html" class="logo-link"><span class="logo-accent">Web</span>Studio </a>
         <nav class="header__nav">
-          <a href="./index.html" class="logo-link"><span class="logo-accent">Web</span>Studio </a>
           <!--разделы меню /  -->
           <ul class="menu list">
             <li class="menu__item item">
@@ -48,6 +48,14 @@
               <a href="/" class="menu__link link">Контакты</a>
             </li>
           </ul>
+
+          <!-- Burger -->
+          <!-- <button type="button" class="menu__berger-btn">
+            <svg class="" width="40" height="40">
+              <use href="./images/icon.svg#close"></use>
+              <use href="./images/icon.svg#menu"></use>
+            </svg>
+          </button> -->
         </nav>
 
         <!-- адреса -->
@@ -68,8 +76,62 @@
             >
           </li>
         </ul>
+
+        <div class="humburger js-open-menu">
+          <div class="humburger__line"></div>
+        </div>
       </div>
     </header>
+
+    <!-- гамбургер   -->
+
+    <div class="js-menu-container">
+      <div class="js-menu-container__flex">
+        <div class="js-menu-container__top">
+          <nav class="mobile-nav">
+            <ul class="list mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a href="./index.html" class="mobile-nav__link link mobile-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a href="./portfolio.html" class="mobile-nav__link link">Портфолио</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="js-menu-container__bot">
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__phone"> +38 096 111 11 11 </a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__email">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="#" class="mobile-social__link" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <main>
       <!-- hero-section -->
       <section class="hero section">
@@ -597,88 +659,91 @@
 
     <!-- Модалка -->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__close" data-modal-close>
-          <svg width="11px" height="11px">
-            <use href="./images/icon.svg#icon-vector"></use>
-          </svg>
-        </button>
-
-        <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
-        <form class="form" name="main-form" autocomplete="on">
-          <div class="form-field">
-            <label for="user-name" class="form-field__label">Имя</label>
-            <div class="form-field__inner">
-              <input type="text" name="user-name" id="user-name" class="form-field__input" />
-              <svg width="18" height="18" class="form-field__icon">
-                <use href="./images/icon.svg#icon-person-popup"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="user-phone" class="form-field__label">Телефон</label>
-            <div class="form-field__inner">
-              <input
-                type="tel"
-                name="user-phone"
-                id="user-phone"
-                class="form-field__input"
-                required
-                placeholder=" "
-              />
-              <svg width="18" height="18" class="form-field__icon">
-                <use href="./images/icon.svg#icon-phone-popup"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="user-mail" class="form-field__label">Почта</label>
-            <div class="form-field__inner">
-              <input
-                type="email"
-                name="user-mail"
-                id="user-mail"
-                class="form-field__input"
-                required
-                placeholder=" "
-              />
-              <svg width="18" height="18" class="form-field__icon">
-                <use href="./images/icon.svg#icon-mail-popup"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="user-coment" class="form-field__label">Комментарий</label>
-            <textarea
-              name="coment"
-              id="user-coment"
-              placeholder="Введите текст"
-              class="form-field__input textarea"
-            ></textarea>
-          </div>
-          <div class="form-field check">
-            <label class="form-field__label checkbox__label">
-              <input type="checkbox" name="policy" class="checkbox" />
-              <svg width="16" height="15" class="form-icon">
-                <use href="images/icon.svg#icon-check-popup"></use>
-              </svg>
-
-              Соглашаюсь с рассылкой и принимаю &nbsp;
-              <a href="#" class="form-link"> Условия договора</a>
-            </label>
-          </div>
-
-          <button type="submit" class="form-btn">
-            Отправить
-            <svg width="18px" height="18px" class="form-btn__icon">
-              <use href="./images/icon.svg#icon-arrow"></use>
+      <div class="modal-">
+        <div class="modal">
+          <button class="modal__close" data-modal-close>
+            <svg width="11px" height="11px">
+              <use href="./images/icon.svg#icon-vector"></use>
             </svg>
           </button>
-        </form>
+
+          <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
+          <form class="form" name="main-form" autocomplete="on">
+            <div class="form-field">
+              <label for="user-name" class="form-field__label">Имя</label>
+              <div class="form-field__inner">
+                <input type="text" name="user-name" id="user-name" class="form-field__input" />
+                <svg width="18" height="18" class="form-field__icon">
+                  <use href="./images/icon.svg#icon-person-popup"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="user-phone" class="form-field__label">Телефон</label>
+              <div class="form-field__inner">
+                <input
+                  type="tel"
+                  name="user-phone"
+                  id="user-phone"
+                  class="form-field__input"
+                  required
+                  placeholder=" "
+                />
+                <svg width="18" height="18" class="form-field__icon">
+                  <use href="./images/icon.svg#icon-phone-popup"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="user-mail" class="form-field__label">Почта</label>
+              <div class="form-field__inner">
+                <input
+                  type="email"
+                  name="user-mail"
+                  id="user-mail"
+                  class="form-field__input"
+                  required
+                  placeholder=" "
+                />
+                <svg width="18" height="18" class="form-field__icon">
+                  <use href="./images/icon.svg#icon-mail-popup"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="user-coment" class="form-field__label">Комментарий</label>
+              <textarea
+                name="coment"
+                id="user-coment"
+                placeholder="Введите текст"
+                class="form-field__input textarea"
+              ></textarea>
+            </div>
+            <div class="form-field check">
+              <label class="form-field__label checkbox__label">
+                <input type="checkbox" name="policy" class="checkbox" />
+                <svg width="16" height="15" class="form-icon">
+                  <use href="images/icon.svg#icon-check-popup"></use>
+                </svg>
+
+                Соглашаюсь с рассылкой и принимаю &nbsp;
+                <a href="#" class="form-link"> Условия договора</a>
+              </label>
+            </div>
+
+            <button type="submit" class="form-btn">
+              Отправить
+              <svg width="18px" height="18px" class="form-btn__icon">
+                <use href="./images/icon.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
