@@ -577,7 +577,7 @@ body.is-hidden {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-column-gap: 10px;
@@ -594,6 +594,7 @@ body.is-hidden {
   .contacts__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
   }
 }
 .contacts__icon {
