@@ -1,5 +1,7 @@
 .check {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   margin-top: 10px;
   cursor: pointer;
@@ -36,7 +38,7 @@
 }
 
 .checkbox-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
